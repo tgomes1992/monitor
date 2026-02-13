@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import HeaderCard from '../components/HeaderCard/index.jsx';
 import QueueSummaryCards from '../components/QueueSummaryCards/index.jsx';
+import HeaderText from "../components/HeaderText/index.jsx";
 
 function MonitorOtdx() {
     const [queueData] = useState({
@@ -193,7 +194,7 @@ function MonitorOtdx() {
 
     return (
         <div>
-            <h1>Monitor OTdx</h1>
+            <HeaderText text="Monitor OTDX" />
 
             {/* Header cards based on queue data */}
             <div className="row">

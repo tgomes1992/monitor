@@ -1,0 +1,69 @@
+/* Root Layout Styles */
+
+.root-container {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background: #ffffff;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 280px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transition: margin-left 0.3s ease;
+  background: radial-gradient(circle at top, #0f172a 0%, #020617 100%);
+  min-height: 100vh;
+}
+
+/* When navbar is collapsed, adjust main content margin */
+.lateral-navbar.collapsed ~ .main-content {
+  margin-left: 80px;
+}
+
+/* Mobile responsiveness */
+@media only screen and (max-width: 992px) {
+  .root-container {
+    flex-direction: column;
+  }
+
+  .lateral-navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 240px;
+    z-index: 1001;
+  }
+
+  .main-content {
+    margin-left: 240px;
+    margin-top: 0;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .main-content {
+    margin-left: 200px;
+  }
+}
+
+/* Scrollbar styling for main content */
+.main-content::-webkit-scrollbar {
+  width: 8px;
+}
+
+.main-content::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.main-content::-webkit-scrollbar-thumb {
+  background: rgba(0, 229, 255, 0.3);
+  border-radius: 4px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 229, 255, 0.5);
+}
+

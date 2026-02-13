@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { StrictMode } from 'react';
 import { RouterProvider } from 'react-router-dom';
 import router from './router.jsx';
+import './RootLayout.css';
 
 function Root() {
   useEffect(() => {
