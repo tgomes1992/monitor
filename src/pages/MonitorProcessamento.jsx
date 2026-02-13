@@ -1,9 +1,9 @@
 import { useState, useMemo, useEffect, useRef, useCallback } from 'react'
-import HeaderCard from './components/HeaderCard'
-import BaseFundo from './components/BaseFundo'
-import HeaderText from './components/HeaderText'
-import Pagination from './components/Pagination'
-import './App.css'
+import HeaderCard from '../components/HeaderCard/index.jsx'
+import BaseFundo from '../components/BaseFundo/index.jsx'
+import HeaderText from '../components/HeaderText/index.jsx'
+import Pagination from '../components/Pagination/index.jsx'
+import '../App.css'
 
 const CARDS_PER_PAGE = 24;
 const REFRESH_INTERVAL = 60;
@@ -46,7 +46,7 @@ const computeStats = (cards) => ({
 });
 
 
-function App() {
+function MonitorProcessamento() {
     // ─── STATE ───────────────────────────────────────────────────────────────
     // `liveCards`    → what is actually rendered on screen (never cleared)
     // `stagedCards`  → freshly fetched batch waiting to go live
@@ -84,7 +84,7 @@ function App() {
                 const nextData = await fetchNextData();
                 setStagedCards(nextData);
             } catch (err) {
-                console.error('[App] Refresh failed:', err);
+                console.error('[MonitorProcessamento] Refresh failed:', err);
             } finally {
                 refreshInFlightRef.current = false;         // ← FIX: limpa ANTES do setState
                 setIsRefreshing(false);
@@ -199,4 +199,4 @@ function App() {
     );
 }
 
-export default App;
+export default MonitorProcessamento;

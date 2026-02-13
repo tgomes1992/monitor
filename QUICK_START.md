@@ -62,19 +62,19 @@ npm build
 ## 🎨 Customization
 
 ### Change Cards Per Page
-Edit `src/App.jsx` line ~27:
+Edit `src/MonitorProcessamento.jsx` line ~27:
 ```javascript
 const CARDS_PER_PAGE = 24; // Change this number
 ```
 
 ### Modify Colors
-Edit `src/App.jsx` line ~24:
+Edit `src/MonitorProcessamento.jsx` line ~24:
 ```javascript
 const COLORS = ['#06b6d4', '#e74c3c', '#27ae60', /* more colors */];
 ```
 
 ### Adjust Card Data
-Edit the `generateTestData()` function in `src/App.jsx` to change:
+Edit the `generateTestData()` function in `src/MonitorProcessamento.jsx` to change:
 - Number of cards generated
 - Data fields (cd_fundo, data_jcot, data_amplis)
 - Date generation logic
@@ -127,8 +127,8 @@ monitor/
 │   │   ├── HeaderCard/       # Stat cards
 │   │   ├── HeaderText/       # Header with title
 │   │   └── Pagination/       # Pagination controls
-│   ├── App.jsx               # Main app component
-│   ├── App.css               # App styles
+│   ├── MonitorProcessamento.jsx               # Main app component
+│   ├── MonitorProcessamento.css               # MonitorProcessamento styles
 │   ├── index.css             # Global styles
 │   └── main.jsx              # Entry point
 ├── package.json              # Dependencies
@@ -203,7 +203,7 @@ See `TV_LAYOUT_GUIDE.md` for:
 
 To modify the dashboard:
 1. Edit component files in `src/components/`
-2. Update App.jsx for layout changes
+2. Update MonitorProcessamento.jsx for layout changes
 3. Modify colors/styling in component files
 4. Test on different screen sizes
 5. Run `npm run build` before deploying

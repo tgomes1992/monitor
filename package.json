@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "proxy": "https://www.otdx-api.com.br",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -12,7 +13,8 @@
   "dependencies": {
     "materialize": "^1.0.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.13.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.39.1",

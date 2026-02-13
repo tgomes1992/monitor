@@ -95,7 +95,7 @@ const colorMap = {
 - Optimized for TV viewing with proper spacing
 
 ## Files Modified
-1. **src/App.jsx** - Enhanced layout, pagination logic, and responsive grid
+1. **src/MonitorProcessamento.jsx** - Enhanced layout, pagination logic, and responsive grid
 2. **src/components/Pagination/index.jsx** - Complete redesign with quick-jump feature
 3. **src/components/BaseFundo/index.jsx** - Responsive sizing and better card layout
 4. **src/components/HeaderCard/index.jsx** - Responsive stat cards
