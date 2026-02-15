@@ -53,7 +53,15 @@ const LateralNavbar = () => {
       icon: 'business',
       routes: [
         { path: '/emissores', label: 'Emissores', icon: 'apartment' },
+        { path: '/emissores/lista', label: 'Lista de Emissores', icon: 'apartment' },
         { path: '/custo-cetip', label: 'Custo CETIP', icon: 'attach_money' },
+      ],
+    },
+    {
+      title: 'Relatórios',
+      icon: 'assessment',
+      routes: [
+        { path: '/relatorios-diarios-xp', label: 'Relatórios Diários XP', icon: 'insert_chart' },
       ],
     },
     {

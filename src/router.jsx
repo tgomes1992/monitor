@@ -8,8 +8,10 @@ import StatusJcot from './pages/StatusJcot.jsx';
 import Jobs from './pages/Jobs.jsx';
 import EventosAtivo from './pages/EventosAtivo.jsx';
 import ImportacaoArquivos from './pages/ImportacaoArquivos.jsx';
+import RelatoriosDiariosXP from './pages/RelatoriosDiariosXP.jsx';
 import EmissoresPage from './pages/Emissores.jsx';
 import CustoCetipPage from './pages/CustoCetip.jsx';
+import EmissoresList from './pages/EmissoresList.jsx';
 
 
 
@@ -55,6 +57,8 @@ const regulatorioRoutes = [
 const emissoresApp = [
   {
     path :'/emissores' ,  element: <EmissoresPage  />
+  } ,  {
+    path :'/emissores/lista' ,  element: <EmissoresList  />
   } ,
   {
     path: '/custo-cetip' ,  element : <CustoCetipPage  />
@@ -63,7 +67,7 @@ const emissoresApp = [
 
 const relatoriosroutes = [
   {
-    path :'/relatorios-diarios-xp' ,  element:<SimplePage description="Custo Cetip" title="Custo Cetip" />
+    path :'/relatorios-diarios-xp' ,  element: <RelatoriosDiariosXP />
   } ,
 ]
 

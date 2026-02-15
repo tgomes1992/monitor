@@ -1,15 +1,15 @@
 /* Lateral Navbar - Material Design with Enhanced Styling */
 
 :root {
-  --navbar-bg-start: #1e293b;
-  --navbar-bg-end: #0f172a;
-  --navbar-accent: #00e5ff;
-  --navbar-accent-dark: #00b8d4;
+  --navbar-bg-start: #0f172a;
+  --navbar-bg-end: #020617;
+  --navbar-accent: #06b6d4;
+  --navbar-accent-dark: #0891b2;
   --navbar-text: #ffffff;
   --navbar-text-secondary: rgba(255, 255, 255, 0.7);
   --navbar-border: rgba(255, 255, 255, 0.1);
-  --navbar-hover-bg: rgba(0, 229, 255, 0.08);
-  --navbar-active-bg: rgba(0, 229, 255, 0.15);
+  --navbar-hover-bg: rgba(6, 182, 212, 0.08);
+  --navbar-active-bg: rgba(6, 182, 212, 0.15);
   --transition-speed: 0.3s;
 }
 
@@ -44,7 +44,7 @@
   padding: 1.25rem 1rem;
   border-bottom: 1px solid var(--navbar-border);
   min-height: 70px;
-  background: linear-gradient(135deg, rgba(0, 229, 255, 0.05) 0%, transparent 100%);
+  background: linear-gradient(135deg, rgba(6, 182, 212, 0.05) 0%, transparent 100%);
   flex-shrink: 0;
 }
 
@@ -67,10 +67,10 @@
 
 @keyframes pulse-icon {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(0, 229, 255, 0);
+    box-shadow: 0 0 0 0 rgba(6, 182, 212, 0);
   }
   50% {
-    box-shadow: 0 0 0 6px rgba(0, 229, 255, 0.1);
+    box-shadow: 0 0 0 6px rgba(6, 182, 212, 0.1);
   }
 }
 
@@ -112,7 +112,7 @@
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: rgba(0, 229, 255, 0.1);
+  background: rgba(6, 182, 212, 0.1);
   transform: translate(-50%, -50%);
   transition: width var(--transition-speed) ease, height var(--transition-speed) ease;
 }
@@ -161,7 +161,7 @@
   position: relative;
   transition: all var(--transition-speed) ease;
   clear: both;
-  border-top: 1px solid rgba(0, 229, 255, 0.15);
+  border-top: 1px solid rgba(6, 182, 212, 0.15);
   padding-top: 1rem;
   cursor: default;
   user-select: none;
@@ -177,7 +177,7 @@
 .section-icon {
   font-size: 18px;
   flex-shrink: 0;
-  color: rgba(0, 229, 255, 0.6);
+  color: rgba(6, 182, 212, 0.6);
   transition: color var(--transition-speed) ease;
   display: flex;
   align-items: center;
@@ -191,7 +191,7 @@
   font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 1.5px;
-  color: rgba(0, 229, 255, 0.6);
+  color: rgba(6, 182, 212, 0.6);
   margin: 0;
   display: flex;
   align-items: center;
