@@ -4,12 +4,18 @@ import MonitorOtdx from './pages/MonitorOtdx.jsx';
 import React from 'react';
 import SimplePage from "./pages/SimplePage.jsx";
 import Layout from './Layout.jsx';
+import StatusJcot from './pages/StatusJcot.jsx';
+import Jobs from './pages/Jobs.jsx';
+import EventosAtivo from './pages/EventosAtivo.jsx';
+import ImportacaoArquivos from './pages/ImportacaoArquivos.jsx';
+import EmissoresPage from './pages/Emissores.jsx';
+import CustoCetipPage from './pages/CustoCetip.jsx';
 
 
 
 const jcothelperroutes = [
   {
-    path: '/listfundos' ,element: <SimplePage description="Jcot Helper - Listagem de Fundos" title="Listagem de Fundos" />,
+    path: '/listfundos' ,element: <StatusJcot/>,
   }  ,
   {
     path :'/excluir_nota_jcot' ,  element: <SimplePage description="Excluir notas jcot" title="Excluir Notas Jcot" />
@@ -22,10 +28,10 @@ const jcothelperroutes = [
 
 const rendafixaroutes = [
   {
-    path :'/eventos' ,  element: <SimplePage description="Eventos Diários" title="Eventos Diários" />
+    path :'/eventos' ,  element: <EventosAtivo />
   } ,
   {
-    path :'/importacoes_cetip' ,  element: <SimplePage description="Imnportação DAGENDA" title="iMPORTAÇÃO Arquivo DAGENDA" />
+    path :'/importacoes_cetip' ,  element: <ImportacaoArquivos  />
   } ,
 ]
 
@@ -48,12 +54,19 @@ const regulatorioRoutes = [
 
 const emissoresApp = [
   {
-    path :'/emissores' ,  element: <SimplePage description="Emissores" title="Emissores" />
+    path :'/emissores' ,  element: <EmissoresPage  />
   } ,
   {
-    path: '/custo-cetip' ,  element : <SimplePage description="Custo Cetip" title="Custo Cetip" />
+    path: '/custo-cetip' ,  element : <CustoCetipPage  />
   }
 ]
+
+const relatoriosroutes = [
+  {
+    path :'/relatorios-diarios-xp' ,  element:<SimplePage description="Custo Cetip" title="Custo Cetip" />
+  } ,
+]
+
 
 const BucketArquivosRoutes = [
   {
@@ -63,7 +76,7 @@ const BucketArquivosRoutes = [
 
 const JobsRoutes = [
   {
-    path :'/jobs' ,  element: <SimplePage description="JobsRoutes" title="Jobs" />
+    path :'/jobs' ,  element: <Jobs />
   } ,
 ]
 
@@ -98,6 +111,7 @@ const router = createBrowserRouter([
       ...BucketArquivosRoutes,
       ...JobsRoutes,
       ...MonitoresRoutes,
+      ...relatoriosroutes , 
       {
         path: '*',
         element: (
