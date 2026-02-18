@@ -14,41 +14,18 @@ function StatusJcot() {
     const fetchFundos = async () => {
         try {
             // TODO: Replace with your actual API endpoint
-            // const response = await fetch('/api/fundos');
-            // const data = await response.json();
-            
-            const mockData = [
-                {
-                    nome_fundo: 'Fundo XYZ Capital',
-                    cnpj: '12.345.678/0001-90',
-                    cd_fundo: 'F001',
-                    adm: 'Administrador A',
-                    tipo_fundo: 'Multimercado',
-                    data_jcot: '2026-02-14',
-                    bloqueio_amplis: '2026-02-15'
-                },
-                {
-                    nome_fundo: 'Fundo ABC Investimentos',
-                    cnpj: '98.765.432/0001-10',
-                    cd_fundo: 'F002',
-                    adm: 'Administrador B',
-                    tipo_fundo: 'Renda Fixa',
-                    data_jcot: '2026-02-13',
-                    bloqueio_amplis: '2026-02-14'
-                },
-                {
-                    nome_fundo: 'Fundo DEF Ações',
-                    cnpj: '11.222.333/0001-44',
-                    cd_fundo: 'F003',
-                    adm: 'Administrador C',
-                    tipo_fundo: 'Ações',
-                    data_jcot: '2026-02-12',
-                    bloqueio_amplis: '2026-02-13'
-                }
-            ];
-            
-            setFundos(mockData);
+
+            const url  = "http://portal-escrituracao:5001/jcothelper/api/status/"
+
+            const response = await fetch(url);
+            const data = await response.json();
+
+            setFundos(data);
             setUltimaAtualizacao(new Date().toLocaleString('pt-BR'));
+            setUltimaAtualizacao( new Date(data[0].hora_atualizacao).toLocaleString('pt-BR'));
+
+
+
         } catch (error) {
             console.error('Erro ao buscar fundos:', error);
         }
