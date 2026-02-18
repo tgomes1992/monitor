@@ -71,7 +71,6 @@ const relatoriosroutes = [
   } ,
 ]
 
-
 const BucketArquivosRoutes = [
   {
     path :'/bucket-arquivos' ,  element: <SimplePage description="Bucket de Arquivos" title="Bucket de Arquivos" />
